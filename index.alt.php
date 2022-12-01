@@ -204,6 +204,26 @@
 
     $filtereditems = filter($pleb, 'year', 1342);
   ?>  
+
+<ul>
+        <?php foreach ($filteredBooks as $book): ?>
+        <li>
+            <a href="<?= $book['purchaseUrl'] ?>">
+                <?= $book['name']; ?> (<?= $book['release year'] ?>)- By <?= $book['author'];?>
+            </a>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+
+    <h1>
+        <?= $business['name']?>
+    </h1>
+    
+    <ul>
+        <?php foreach ($business['categories'] as $category): ?>
+            <li><?= $category; ?></li>
+        <?php endforeach; ?>
+    </ul>
   
 
 </body>
